@@ -30,7 +30,7 @@ app.use(cookieParser());  // read cookies (needed for auth)
 app.use(bodyParser.json()); // get info from html forms
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.set('view engin','ejs');
+app.set('view engine','ejs');
 
 // required for passport
 app.use(session({secret: 'ilovescotchscotchyscotchscotch'}));
@@ -41,7 +41,7 @@ app.use(flash()); // use connect-flash for flash messags stored in session
 
 // routes====
 
-// require('./app/routes.js')(app,passport);
+require('./app/routes.js')(app,passport);
 
 //launch =====
 
